@@ -184,6 +184,8 @@ public class TapeView extends View {
         int totalWidth = width / 2;
         //多加一个gapWidth 防止数字消失太突然
         while (drawLength < width / 2 + gapWidth) {
+            if (currentValue<minValue)
+                break;
             if (currentValue % 10 == 0) {
                 canvas.drawLine(totalWidth - drawLength, 0, totalWidth - drawLength, tapeHeight * 2, tapePaint);
                 drawText(canvas, currentValue, totalWidth - drawLength);
@@ -202,6 +204,8 @@ public class TapeView extends View {
         int totalWidth = width / 2;
         //多加一个gapWidth 防止数字消失太突然
         while (drawLength < width / 2 + gapWidth) {
+            if (currentValue>maxValue)
+                break;
             if (currentValue % 10 == 0) {
                 canvas.drawLine(totalWidth + drawLength, 0, totalWidth + drawLength, tapeHeight * 2, tapePaint);
                 drawText(canvas, currentValue, totalWidth + drawLength);
