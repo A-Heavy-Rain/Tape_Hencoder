@@ -1,4 +1,4 @@
-![img](https://github.com/A-Heavy-Rain/Tape_Hencoder/commit/9e6206f2680a0a2626b76c201b4af14542b32302#diff-67d1cc4485dca4827851127ebf528743)
+![img](https://github.com/A-Heavy-Rain/Tape_Hencoder/blob/master/ezgif.com-video-to-gif.gif)
 # Tape_Hencoder
 ## 高度自定义刻度尺，HenCoder仿写系列。
 我所实现的几个重要点：
