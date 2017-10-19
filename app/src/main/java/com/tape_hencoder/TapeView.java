@@ -9,7 +9,6 @@ import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -282,10 +281,14 @@ public class TapeView extends View {
                 float xVelocity = velocityTracker.getXVelocity();
 
                 isCanJustScroll = true;
+                isCanScroll = true;
 
                 if (Math.abs(xVelocity) > minVelocity) {
+
                     scroller.fling((int) event.getX(), 0, (int) xVelocity, 0, Integer.MIN_VALUE,
                             Integer.MAX_VALUE, 0, 0);
+                    invalidate();
+
                 } else {
                     if (gapOffset > gapWidth / 2) {
                         adjustScroll((int) event.getX(), -(gapWidth - gapOffset));
@@ -293,7 +296,7 @@ public class TapeView extends View {
                         adjustScroll((int) event.getX(), gapOffset);
                     }
                 }
-                isCanScroll = true;
+
                 break;
             default:
                 break;
@@ -317,7 +320,6 @@ public class TapeView extends View {
     public void computeScroll() {
         super.computeScroll();
         if (scroller.computeScrollOffset()) {
-
             float dx = scroller.getCurrX() - lastX;
             moveX += dx;
             //根据moveX的值判断是否超出最大最小值范围，分情况处理
@@ -366,7 +368,6 @@ public class TapeView extends View {
             invalidate();
 
         } else if (isCanScroll && isCanJustScroll) {
-            Log.i("scroll", "isCanScroll");
             isCanJustScroll = false;
 
             if (gapOffset > gapWidth / 2) {
