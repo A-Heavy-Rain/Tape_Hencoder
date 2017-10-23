@@ -1,4 +1,4 @@
-package com.tape_hencoder;
+package com.tapeview;
 
 import android.content.Context;
 import android.content.res.TypedArray;

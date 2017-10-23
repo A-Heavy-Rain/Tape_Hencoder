@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:background="#F7F9F6"
         android:text="Hello World!"
+        app:gap_width="80px"
         app:max_value="100"
         app:min_value="0" />
-
 </LinearLayout>

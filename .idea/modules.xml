@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tape_Hencoder.iml" filepath="$PROJECT_DIR$/Tape_Hencoder.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tapeview/tapeview.iml" filepath="$PROJECT_DIR$/tapeview/tapeview.iml" />
     </modules>
   </component>
 </project>
